@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>cla</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%- include ('../partial/style')%>
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- body -->
+<body class="main-layout">
+
+<!-- end loader -->
+<!-- header -->
+<%- include ('../partial/navbar')%>
+<!-- end header inner -->
+<!-- end header -->
+<!-- banner -->
+
+
+<!-- products -->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Edit</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form id="request" class="main_form"  method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <input class="contactus" placeholder="Name" type="type" name="name" value="<%= product.name%>" >
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Price" type="type" name="price" value="<%= product.price%>" >
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Quantity" type="type" name="quantity" value="<%= product.quantity %>" >
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea" placeholder="Message" type="type" name="description"value="<%= product.description%>"> </textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Phone Number" type="file" name="image" value="<%= product.image%>">
+                        </div>
+                        <div>
+                            <select name="idCategory" class="browser-default custom-select">
+
+                                <option selected>Open this select menu</option>
+                                <% for (var i = 0; i < listCategory.length; i++) { %>
+                                <option value="<%=listCategory[i].idC%>"><%=listCategory[i].nameC%></option>
+                                <%}%>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="send_btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end products -->
+<!-- laptop  section -->
+
+<!-- end contact -->
+<!--  footer -->
+
+<!-- end footer -->
+
+</body>
+</html>
+
